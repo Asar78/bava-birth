@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Happy Birthday Bavatharani ♡</title>
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;font-family:Georgia,"Times New Roman",serif}
+body{background:#18080e;color:#fff;overflow:hidden}
+#app{width:100%;height:100%;position:relative}
+.page{
+ position:absolute;inset:0;width:100%;height:100%;
+ display:none;overflow-y:auto;overflow-x:hidden;
+ -webkit-overflow-scrolling:touch;
+}
+.page.active{display:block}
+.center{min-height:100%;display:flex;align-items:center;justify-content:center;text-align:center;padding:30px}
+.wrap{width:min(1000px,92%);margin:auto}
+h1,h2,h3,p{max-width:100%}
+.script{font-family:"Brush Script MT","Segoe Script",cursive}
+.eyebrow{text-transform:uppercase;letter-spacing:4px;font-size:.72rem;opacity:.75}
+.title{font-size:clamp(3.1rem,11vw,7rem);line-height:.9;margin:20px 0;text-shadow:0 0 35px #ff6f9199}
+.btn{
+ border:1px solid #ffffff88;background:#ffffff18;color:#fff;padding:14px 24px;
+ border-radius:999px;cursor:pointer;font-size:1rem;backdrop-filter:blur(10px);
+ box-shadow:0 10px 30px #0006;transition:.25s
+}
+.btn:hover{transform:translateY(-3px);background:#ff668c55}
+.btn.primary{background:linear-gradient(135deg,#ff668c,#d83e67);border-color:#ffb3c4}
+#music{
+ position:fixed;right:14px;bottom:14px;z-index:1000;
+ display:flex;align-items:center;gap:7px;background:#ffffff18;border:1px solid #fff3;
+ padding:7px 10px;border-radius:999px;backdrop-filter:blur(12px)
+}
+#music button{border:0;border-radius:50%;width:38px;height:38px;background:#ff668c;color:#fff;cursor:pointer}
+#music small{max-width:120px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#dots{position:fixed;z-index:999;top:12px;left:50%;transform:translateX(-50%);display:flex;gap:7px}
+.dot{width:8px;height:8px;border-radius:50%;background:#fff5}.dot.on{background:#fff;box-shadow:0 0 12px #fff}
+.bg{
+ position:absolute;inset:0;pointer-events:none;
+ background:radial-gradient(circle at 50% 30%,#713044,#16070d 68%);
+}
+.glow{
+ position:absolute;width:55vw;height:55vw;border-radius:50%;
+ background:#ff729233;filter:blur(50px);left:20%;top:15%;pointer-events:none
+}
+.heart{
+ position:fixed;z-index:3;pointer-events:none;color:#fff;
+ animation:float 9s linear infinite;opacity:.7
+}
+@keyframes float{from{transform:translateY(110vh)}to{transform:translateY(-15vh) rotate(30deg)}}
+
+/* PAGE 2 */
+#p2{background:linear-gradient(145deg,#18080e,#501a2d)}
+.head{text-align:center;padding:70px 0 25px}
+.head h2{font-size:clamp(2.5rem,8vw,5rem);margin:10px 0}
+.counter{text-align:center;color:#ffd8e1;margin-bottom:22px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding-bottom:30px}
+.card{aspect-ratio:3/4;perspective:900px;cursor:pointer}
+.cardin{width:100%;height:100%;position:relative;transition:.7s;transform-style:preserve-3d}
+.card.open .cardin{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;border:7px solid white;border-radius:12px;overflow:hidden;box-shadow:0 18px 35px #0008}
+.front{background:linear-gradient(135deg,#fff0f4,#ff9eb3);color:#713044;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.front b{font-size:2rem}.front small{margin-top:8px}
+.back{transform:rotateY(180deg);background:#fff}
+.back img{width:100%;height:100%;object-fit:cover}
+.ropebox{display:none;padding:15px 0 30px}
+.ropebox.show{display:block}
+.rope{height:3px;background:#d8ad91;margin:15px 2% 0}
+.hanging{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:0}
+.hanging div{position:relative;padding-top:25px;animation:sway 3s ease-in-out infinite}
+.hanging div:nth-child(even){animation-delay:.6s}
+@keyframes sway{50%{transform:rotate(3deg)}}
+.pin{position:absolute;top:10px;left:50%;transform:translateX(-50%);width:12px;height:16px;background:#fff;border-radius:3px;z-index:2}
+.hanging img{width:100%;aspect-ratio:3/4;object-fit:cover;border:6px solid #fff;box-shadow:0 10px 25px #0007}
+.next{display:none;text-align:center;padding:25px 0 80px}
+.next.show{display:block}
+
+/* PAGE 3 */
+#p3{background:linear-gradient(145deg,#fff5ee,#ffdce5);color:#4b2c34}
+.notes{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;padding-bottom:25px}
+.note{background:#fffaf0;padding:27px 23px;box-shadow:0 12px 25px #a65d7040;border-left:4px solid #e996aa;transform:rotate(-1deg);line-height:1.65}
+.note:nth-child(even){transform:rotate(1.2deg)}
+.note h3{font-family:"Brush Script MT","Segoe Script",cursive;color:#d54d70;font-size:1.7rem;margin:0 0 10px}
+.sorry-zone{text-align:center;position:relative;min-height:260px;padding:25px 0 50px;overflow:hidden}
+.cat{font-size:85px;display:block;filter:drop-shadow(0 10px 12px #0002)}
+.board{display:inline-block;background:#fffdf2;border:2px solid #e99aac;padding:9px 15px;border-radius:8px;color:#693542;font-weight:bold}
+.bomb{font-size:70px;cursor:pointer;display:inline-block;animation:bounce 1.8s infinite}
+@keyframes bounce{50%{transform:translateY(-8px)}}
+.rain{position:fixed;inset:0;z-index:50;pointer-events:none;overflow:hidden;display:none}
+.rain.on{display:block}
+.rword{position:absolute;top:-40px;font-weight:bold;text-shadow:0 0 12px currentColor;animation:rain 5s linear forwards}
+.rword.s{color:#d84e73}.rword.l{color:#ef4f88}
+@keyframes rain{to{transform:translate(var(--x),115vh) rotate(var(--r));opacity:.2}}
+.nextdark{text-align:center;padding:10px 0 80px}
+
+/* PAGE 4 */
+#p4{background:radial-gradient(circle at 50% 25%,#713044,#17070d 70%)}
+.letter-head{text-align:center;padding:70px 0 10px}
+.envelope-area{min-height:580px;display:flex;justify-content:center;align-items:center;padding:25px 0}
+.envelope{width:min(720px,94%);height:310px;background:#f1cbb7;position:relative;border-radius:12px;box-shadow:0 30px 70px #0009;cursor:pointer;overflow:visible}
+.flap{position:absolute;inset:0;background:#f9ddca;clip-path:polygon(0 0,50% 62%,100% 0);transform-origin:top;transition:1s;z-index:5}
+.seal{position:absolute;z-index:7;left:50%;top:48%;transform:translate(-50%,-50%);width:65px;height:65px;border-radius:50%;background:#d94c6c;display:grid;place-items:center;font-size:30px;transition:.6s}
+.paper{position:absolute;left:5%;right:5%;bottom:10px;height:290px;background:#fffaf0;color:#4b3035;padding:25px;border-radius:6px;overflow:auto;transform:translateY(75%);transition:1s;z-index:4;line-height:1.65}
+.envelope.open .flap{transform:rotateX(180deg);z-index:1}
+.envelope.open .seal{opacity:0}
+.envelope.open .paper{transform:translateY(-15%)}
+.paper h3{font-family:"Brush Script MT","Segoe Script",cursive;color:#d24c70;font-size:2.2rem;margin:0 0 12px}
+.love-zone{text-align:center;min-height:300px;padding:30px 0 60px;position:relative}
+.love-bomb{font-size:75px;cursor:pointer;display:inline-block;animation:bounce 1.8s infinite}
+.paperfall{position:absolute;top:-20px;width:55px;height:35px;background:#fffaf1;box-shadow:0 5px 12px #0002;animation:rain 6s linear forwards}
+
+/* PAGE 5 */
+#p5{background:radial-gradient(circle at 50% 40%,#57233b,#10060b 72%)}
+.final{min-height:100%;display:flex;align-items:center;justify-content:center;text-align:center;padding:35px}
+.final h2{font-size:clamp(3.2rem,10vw,7rem);line-height:.9;margin:18px 0}
+.moon{position:absolute;right:8%;top:12%;width:160px;height:160px;border-radius:50%;background:#fff7ed;box-shadow:0 0 80px #fff5}
+.final .content{position:relative;z-index:2}
+
+/* mobile */
+@media(max-width:700px){
+ .cards{grid-template-columns:repeat(2,1fr);gap:12px}
+ .hanging{grid-template-columns:repeat(2,1fr);gap:18px 12px}
+ .rope{display:none}
+ .notes{grid-template-columns:1fr}
+ .note{font-size:.96rem}
+ .envelope{height:260px}
+ .paper{height:250px}
+ .moon{width:110px;height:110px}
+}
+@media(max-width:390px){.cards{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div id="app">
+
+<div id="dots"><span class="dot on"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+
+<div id="music"><button id="musicBtn">▶</button><small id="musicName">Music ♡</small></div>
+
+<!-- PAGE 1 -->
+<section class="page active" id="p1">
+ <div class="bg"></div><div class="glow"></div>
+ <div class="center">
+  <div class="wrap">
+   <div class="eyebrow">A surprise made only for you</div>
+   <h1 class="title script">Happy Birthday<br>Bavatharani ♡</h1>
+   <p style="font-size:1.2rem;opacity:.85">To the person who makes my world a little more beautiful.</p>
+   <br>
+   <button class="btn primary" onclick="nextPage(1)">Open My Surprise ♡</button>
+  </div>
+ </div>
+</section>
+
+<!-- PAGE 2 -->
+<section class="page" id="p2">
+ <div class="wrap">
+  <div class="head">
+   <div class="eyebrow">Page 02 · Our memories</div>
+   <h2 class="script">Tap each memory ♡</h2>
+   <p>Open all six, one by one.</p>
+  </div>
+  <div class="counter" id="counter">0 / 6 memories opened</div>
+  <div class="cards">
+   <div class="card" onclick="openPhoto(this)"><div class="cardin"><div class="face front"><b>01</b><small>Tap me ♡</small></div><div class="face back"><img src="105880.jpg"></div></div></div>
+   <div class="card" onclick="openPhoto(this)"><div class="cardin"><div class="face front"><b>02</b><small>Tap me ♡</small></div><div class="face back"><img src="105882.jpg"></div></div></div>
+   <div class="card" onclick="openPhoto(this)"><div class="cardin"><div class="face front"><b>03</b><small>Tap me ♡</small></div><div class="face back"><img src="105883.jpg"></div></div></div>
+   <div class="card" onclick="openPhoto(this)"><div class="cardin"><div class="face front"><b>04</b><small>Tap me ♡</small></div><div class="face back"><img src="105884.jpg"></div></div></div>
+   <div class="card" onclick="openPhoto(this)"><div class="cardin"><div class="face front"><b>05</b><small>Tap me ♡</small></div><div class="face back"><img src="105885.jpg"></div></div></div>
+   <div class="card" onclick="openPhoto(this)"><div class="cardin"><div class="face front"><b>06</b><small>Tap me ♡</small></div><div class="face back"><img src="105886.jpg"></div></div></div>
+  </div>
+
+  <div class="ropebox" id="ropebox">
+   <p style="text-align:center">All our memories, together. ♡</p>
+   <div class="rope"></div>
+   <div class="hanging">
+    <div><span class="pin"></span><img src="105880.jpg"></div>
+    <div><span class="pin"></span><img src="105882.jpg"></div>
+    <div><span class="pin"></span><img src="105883.jpg"></div>
+    <div><span class="pin"></span><img src="105884.jpg"></div>
+    <div><span class="pin"></span><img src="105885.jpg"></div>
+    <div><span class="pin"></span><img src="105886.jpg"></div>
+   </div>
+  </div>
+
+  <div class="next" id="next2">
+   <button class="btn primary" onclick="nextPage(2)">There is something I want to say →</button>
+  </div>
+ </div>
+</section>
+
+<!-- PAGE 3 -->
+<section class="page" id="p3">
+ <div class="rain" id="sorryRain"></div>
+ <div class="wrap">
+  <div class="head">
+   <div class="eyebrow">Page 03 · From my heart</div>
+   <h2 class="script">Konjam words... romba meaning ♡</h2>
+   <p>Scroll and read everything. The button is only at the end.</p>
+  </div>
+  <div class="notes">
+   <article class="note"><h3>I am really sorry to you...</h3><p>Unna hate pannanum nu illa. Nejama unna kashtapaduthanum nu edhuvum pannala. I always want to see your smile and happiness. So adhukaaga naan enna venaalum pannuven.</p></article>
+   <article class="note"><h3>Enakku therinja unmai...</h3><p>Naan neraiya unna oru pakkam romba love pannalum, another side naan unna kashtapaduthuren-nu enakku theriyala. Naan ovvoru vaatiyum en pain unakku theriyanum-nu dhaan appadi pannuven; unna hurt pannanum-nu naan oru thadava kooda yosichadhu kooda illa.</p></article>
+   <article class="note"><h3>Ego-aa?</h3><p>So nee en mela “ego” apdinu oru label ippo vara otti irukka. Normal-aa love irukkura edathula ego irukkaadhu. Appadi paatha, naan unna love panna alavukku yaarunae panna mudiyadhu. Then epdi enkitta ego irukkum?</p></article>
+   <article class="note"><h3>Unakku munnadi...</h3><p>Unakku munnadi edhuvumae enakku perusa theriyadhu. Appadi paakumbodhu ego mattum epdi enakku theriyum? Enakku kovam varum, but unkitta ego kaatta maatten. Kovam dhaan kaatuven.</p></article>
+   <article class="note"><h3>Sorry, Bava 🤍</h3><p>Idhuvaraikum naan unakku panna hurts ellathukkum sorry. Nejama nee nethu morning enkitta pesuna tone-um pesunadhum romba hurt aachu. But anyway, naan ellarukkum sorry. Naan edhuvum venum-nu pannala. From your side, inda maari chinna chinna paasam edhirpaakuren. Adhu kedaikkala-nu enakku kovam varradhu thappu illa dhaana? Adha kaattuna nee un kovatha enkitta kaatura. Anyway, you are my Bava 🤍 Naan ketupen... nee pesu. Love you...</p></article>
+  </div>
+  <div class="sorry-zone">
+   <div class="bomb" onclick="sorryExplosion()">💣</div><br>
+   <span class="cat">😿</span><span class="board">SORRY BAVA 🤍</span>
+   <p style="opacity:.65">Tap the little sorry bomb ♡</p>
+  </div>
+  <div class="nextdark"><button class="btn primary" onclick="nextPage(3)">Open my letter →</button></div>
+ </div>
+</section>
+
+<!-- PAGE 4 -->
+<section class="page" id="p4">
+ <div class="rain" id="loveRain"></div>
+ <div class="wrap">
+  <div class="letter-head">
+   <div class="eyebrow">Page 04 · A letter</div>
+   <h2 class="script">A letter from my heart ♡</h2>
+   <p>Scroll to read. Tap the envelope to open it.</p>
+  </div>
+  <div class="envelope-area">
+   <div class="envelope" id="envelope" onclick="openLetter()">
+    <div class="flap"></div><div class="seal">♡</div>
+    <div class="paper">
+     <h3>My dear Bavatharani,</h3>
+     <p>Nee naa enakku rombo pidikkum... so adha measure panna scale-eh illa.</p>
+     <p>And naan indha alavukku unna love pannuradhukku reason — nee loss panna love-ku mela, naan unakku daily and each second “ennada saamy”ngra maari love kudukkanum nu thonichu. Naan kuduthuttu irukken.</p>
+     <p>So idhu dhaan anikku solla theriyama solli sanda vandhuduchu. Naan unakku love kudupen, love pannuven, love torture pannuven. En odambula indha uyir irukkura varaikum unna mattum dhaan paapen, unna mattum dhaan love pannuven. This is meee... pannikitte iruppen.</p>
+     <p>Adhu unkitta pesittu irundhaalum sari, pesama irundhaalum sari, “I love you Bava” mattum dhaan en vaaila irundhu varum.</p>
+     <p>Maybe idhellam paathuttu “ennada Ivan?” nu nee distance maintain kooda pannalaam. But adhukkaaga en love kashtama irukka mudiyadhu.</p>
+     <p><b>I love you. I love you. I love you, Bavatharani. Only for you. Anything for you. 🤍</b></p>
+    </div>
+   </div>
+  </div>
+  <div class="love-zone">
+   <div class="love-bomb" onclick="loveExplosion()">💖</div><br>
+   <span class="cat">😽</span><span class="board">LOVE YOU BAVA 🤍</span>
+   <p style="opacity:.65">Tap the love bomb ♡</p>
+  </div>
+  <div class="nextdark"><button class="btn primary" onclick="nextPage(4)">One last surprise →</button></div>
+ </div>
+</section>
+
+<!-- PAGE 5 -->
+<section class="page" id="p5">
+ <div class="moon"></div>
+ <div class="final">
+  <div class="content">
+   <div class="eyebrow">Page 05 · Just for you</div>
+   <div style="font-size:3rem">♡ ♡ ♡</div>
+   <h2 class="script">Happy Birthday<br>Bavatharani</h2>
+   <p style="font-size:1.2rem">Always your Bava. 🤍</p>
+   <p>Only you. Only for you. Anything for you.</p>
+  </div>
+ </div>
+</section>
+
+<audio id="a2" src="page2_villu.mp3" loop></audio>
+<audio id="a3" src="page3_kutty.mp3" loop></audio>
+<audio id="a4" src="page4_amaran.mp3" loop></audio>
+<audio id="a5" src="last_don.mp3" loop></audio>
+</div>
+
+<script>
+(function(){
+"use strict";
+
+var pages=["p1","p2","p3","p4","p5"];
+var audios=["","a2","a3","a4","a5"];
+var names=["Music ♡","Villu ♡","Sorry BGM ♡","Amaran ♡","Don ♡"];
+var current=0, opened=0, audio=null, letter=false;
+
+function showPage(n){
+  if(n<0||n>=pages.length)return;
+  for(var i=0;i<pages.length;i++){
+    document.getElementById(pages[i]).classList.toggle("active",i===n);
+    document.querySelectorAll(".dot")[i].classList.toggle("on",i===n);
+  }
+  current=n;
+  document.getElementById(pages[n]).scrollTop=0;
+  playForPage(n);
+}
+window.nextPage=function(n){ showPage(n); };
+
+function playForPage(n){
+  document.querySelectorAll("audio").forEach(function(x){
+    x.pause();x.currentTime=0;
+  });
+  audio=null;
+  if(n>0){
+    audio=document.getElementById(audios[n]);
+    document.getElementById("musicName").textContent=names[n];
+    audio.loop=true;
+    var promise=audio.play();
+    if(promise)promise.catch(function(){});
+    document.getElementById("musicBtn").textContent="❚❚";
+  }else{
+    document.getElementById("musicName").textContent="Music ♡";
+    document.getElementById("musicBtn").textContent="▶";
+  }
+}
+document.getElementById("musicBtn").addEventListener("click",function(){
+  if(!audio){
+    if(current>0)playForPage(current);
+    return;
+  }
+  if(audio.paused){audio.play();this.textContent="❚❚";}
+  else{audio.pause();this.textContent="▶";}
+});
+
+window.openPhoto=function(el){
+  if(el.classList.contains("open"))return;
+  el.classList.add("open");opened++;
+  document.getElementById("counter").textContent=opened+" / 6 memories opened";
+  if(opened===6){
+    document.getElementById("ropebox").classList.add("show");
+    document.getElementById("next2").classList.add("show");
+  }
+};
+
+function makeRain(id,words,cls,count,withPapers){
+  var box=document.getElementById(id);
+  box.innerHTML="";
+  box.classList.add("on");
+  for(var i=0;i<count;i++){
+    var e=document.createElement("span");
+    e.className="rword "+cls;
+    e.textContent=words[Math.floor(Math.random()*words.length)];
+    e.style.left=(Math.random()*100)+"%";
+    e.style.animationDuration=(3.5+Math.random()*5)+"s";
+    e.style.animationDelay=(-Math.random()*5)+"s";
+    e.style.fontSize=(12+Math.random()*15)+"px";
+    e.style.setProperty("--x",(Math.random()*220-110)+"px");
+    e.style.setProperty("--r",(Math.random()*60-30)+"deg");
+    box.appendChild(e);
+  }
+  if(withPapers){
+    for(var j=0;j<35;j++){
+      var p=document.createElement("span");
+      p.className="paperfall";
+      p.style.left=(Math.random()*100)+"%";
+      p.style.animationDuration=(4+Math.random()*5)+"s";
+      p.style.animationDelay=(-Math.random()*5)+"s";
+      p.style.setProperty("--x",(Math.random()*260-130)+"px");
+      p.style.setProperty("--r",(Math.random()*80-40)+"deg");
+      box.appendChild(p);
+    }
+  }
+}
+window.sorryExplosion=function(){
+  makeRain("sorryRain",["SORRY","sorry","SORRY 🤍","🤗 SORRY"],"s",120,false);
+};
+window.loveExplosion=function(){
+  makeRain("loveRain",["LOVE YOU BAVA","love you 🤍","I LOVE YOU","LOVE YOU ♡","BAVA 🤍"],"l",140,true);
+};
+window.openLetter=function(){
+  if(letter)return;
+  letter=true;
+  document.getElementById("envelope").classList.add("open");
+};
+
+for(var i=0;i<22;i++){
+  var h=document.createElement("span");
+  h.className="heart";
+  h.textContent=i%3===0?"♥":"♡";
+  h.style.left=(Math.random()*100)+"%";
+  h.style.animationDelay=(-Math.random()*9)+"s";
+  h.style.animationDuration=(7+Math.random()*7)+"s";
+  h.style.fontSize=(12+Math.random()*16)+"px";
+  document.body.appendChild(h);
+}
+
+showPage(0);
+})();
+</script>
+</body>
+</html>
